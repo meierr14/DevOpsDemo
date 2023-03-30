@@ -82,8 +82,8 @@ public class ToDoController {
     }
 
     @DeleteMapping("/services/todo/{key}")
-    public ToDo deleteTodo(@PathVariable Integer id) {
-        return this.todos.remove(id);
+    public ToDo deleteTodo(@PathVariable Integer key) {
+        return this.todos.remove(key);
     }
 
 

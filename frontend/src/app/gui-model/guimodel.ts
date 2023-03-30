@@ -126,6 +126,16 @@ export class GuiModel {
                             }
                         },
                         {
+                            "type" : "newButton",
+                            "name" : { default: "Neue Kategorie"},
+                            "icon" : "fa-group",
+                            "color" : "red",
+                            "width" : 2,
+                            "form" : {
+                                "form" : "ToDoForm"
+                            }
+                        },
+                        {
                             "type": "list",
                             "name": "ToDo",
                             "icon": "fa-user",
