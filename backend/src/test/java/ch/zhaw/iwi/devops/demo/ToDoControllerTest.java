@@ -3,6 +3,7 @@ package ch.zhaw.iwi.devops.demo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistration;
 
 public class ToDoControllerTest {
     
@@ -24,6 +25,13 @@ public class ToDoControllerTest {
         controller.createTodo(2, todo2);
         controller.deleteTodo(1);
         assertEquals(1, controller.count());
+    }
+
+    @Test
+    public void testTest(){
+        ToDoController controller = new ToDoController();
+        assertEquals("ToDo app is up and running!", controller.test());
+
     }
 
 }
