@@ -3,7 +3,7 @@ package ch.zhaw.iwi.devops.demo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistration;
+//import org.springframework.web.servlet.config.annotation.ViewControllerRegistration;
 
 public class ToDoControllerTest {
     
@@ -30,7 +30,8 @@ public class ToDoControllerTest {
     @Test
     public void testTest(){
         ToDoController controller = new ToDoController();
-        assertEquals("ToDo app is up and running!", controller.test());
+        var response = controller.test();
+        assertEquals("ToDo app is up and running!", response);
 
     }
 
@@ -38,6 +39,14 @@ public class ToDoControllerTest {
     public void testPing(){
         ToDoController controller = new ToDoController();
         assertEquals("{ \"status\": \"ok\", \"userId\": \"admin"+ "\", \"languageCode\": \"de\",\"version\": \"0.0.1" + "\"}", controller.ping());
+    }
+
+    @Test
+    public void testGetTodo(){
+        ToDoController controller = new ToDoController();
+        var todo = new ToDo(1, "t", "d");
+        controller.createTodo(1, todo);
+        assertEquals(controller.getTodo(1), controller.getTodo(1));
     }
 
 }
