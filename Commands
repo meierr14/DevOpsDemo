@@ -1,0 +1,6 @@
+frontend starten
+    npm run starten
+
+
+Sonarqube ausführen (Befehl in einem Terminal innerhalb des Backends laufen lassen)
+    gradlew sonarqube -Dsonar.projectKey=DevOpsPath -Dsonar.host.url=http://localhost:9000 -Dsonar.login=4e9277672eb26a9770de6d907163e905f96c70ae

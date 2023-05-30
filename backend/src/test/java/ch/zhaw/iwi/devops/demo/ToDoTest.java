@@ -1,7 +1,7 @@
 package ch.zhaw.iwi.devops.demo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.description;
+//import static org.mockito.Mockito.description;
 
 import org.junit.jupiter.api.Test;
 

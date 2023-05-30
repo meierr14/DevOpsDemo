@@ -16,7 +16,7 @@ public class PathListEntry<KEYTYPE> {
 	private String tooltip;
 	private List<String> details = new ArrayList<>();
 	private float order;
-	private Form form;
+	private Form formString;
 
 	public PathListEntry() {
 		this.active = true;
@@ -111,18 +111,18 @@ public class PathListEntry<KEYTYPE> {
 	}
 	
 	public String getForm() {
-		if (form == null) {
+		if (formString == null) {
 			return null;
 		}
-		return form.form;
+		return formString.formString;
 	}
 	
 	public void setForm(String form) {
 		if (form == null) {
-			this.form = null;
+			this.formString = null;
 		} else {
-			this.form = new Form();
-			this.form.form = form;
+			this.formString = new Form();
+			this.formString.formString = form;
 		}
 	}
 
@@ -180,7 +180,7 @@ public class PathListEntry<KEYTYPE> {
 	}
 	
 	private class Form {
-		private String form;
+		private String formString;
 	}
 
 	@Override
