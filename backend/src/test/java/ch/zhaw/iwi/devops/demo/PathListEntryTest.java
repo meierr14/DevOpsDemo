@@ -28,4 +28,13 @@ public class PathListEntryTest {
         listEntry.setIcon("circle");
         assertEquals("circle", listEntry.getIcon());
     }
+
+    @Test
+    public void test3() {
+        PathListEntry listEntry = new PathListEntry<>();
+        listEntry.setUrl("testUrl.com");
+        listEntry.setOrder(8);
+        assertEquals("testUrl.com", listEntry.getUrl());
+        assertEquals(8, listEntry.getOrder());
+    }
 }
